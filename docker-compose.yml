@@ -8,3 +8,20 @@ services:
     restart: always
     command: >
       --requirepass "mypassword"
+    networks:
+      - fullstack
+
+  ratelimit:
+    build: .
+    container_name: "ratelimit"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+    restart: always
+    networks:
+      - fullstack
+
+networks:
+  fullstack:
+    driver: bridge
