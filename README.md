@@ -21,7 +21,7 @@ cd ./ratelimit-demo
 ```
 docker compose up -d
 
-# 運行成功起後，可於以下路徑請求次數及過期時間
+# 運行成功起後，可於以下路徑查看請求次數及過期時間
 http://localhost:8080
 ```
 
