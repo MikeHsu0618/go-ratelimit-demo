@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis:6.0-buster
+    ports:
+      - "6379:6379"
+    restart: always
+    command: >
+      --requirepass "mypassword"
