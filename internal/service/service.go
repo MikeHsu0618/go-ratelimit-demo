@@ -29,7 +29,7 @@ func (s service) RateLimit(c *gin.Context) {
 	}
 
 	if count > lua.IPLimitMaximum {
-		c.JSON(http.StatusTooManyRequests, "too many request, ttl: "+strconv.Itoa(int(ttl)))
+		c.JSON(http.StatusTooManyRequests, "too many requests, ttl: "+strconv.Itoa(int(ttl)))
 		return
 	}
 
